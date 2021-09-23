@@ -8,7 +8,7 @@ module Discounts
     end
 
     def call
-      if count > min_item
+      if count >= min_item
         count * new_price
       else
         count * price
