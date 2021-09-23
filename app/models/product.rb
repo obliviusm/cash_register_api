@@ -8,7 +8,7 @@ class Product < ApplicationRecord
     when "GR1"
       { type: :get_free, args: { buy: 1, free: 1 } }
     when "SR1"
-      { type: :discount_price, args: { min_item: 3, price: 4.5 } }
+      { type: :discount_new_price, args: { min_item: 3, new_price: 4.5 } }
     when "CF1"
       { type: :discount_coefficient, args: { min_item: 3, k: (2.0 / 3) } }
     end
