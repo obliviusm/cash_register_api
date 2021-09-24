@@ -1,5 +1,4 @@
 class GetProductsPrice
-
   def initialize(product:, count:)
     @product = product
     @count = count
