@@ -1,3 +1,3 @@
 json.code product.code
 json.name product.name
-json.price product.formatted_price
+json.price format_price(product.price)

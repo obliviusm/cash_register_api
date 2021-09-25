@@ -38,6 +38,6 @@ module CashRegisterApi
     config.api_only = true
 
     config.autoload_paths << Rails.root.join('app/services')
-    config.autoload_paths << Rails.root.join('app/presenters')
+    config.autoload_paths << Rails.root.join('app/helpers')
   end
 end

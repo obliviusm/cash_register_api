@@ -1,1 +1,1 @@
-json.price @price
+json.price format_price(@price)
