@@ -5,7 +5,7 @@ class GetProductsPrice
   end
 
   def call
-    if discount_strategy
+    if discount_strategy && discount_service
       discount_service.new(product: product, count: count, args: discount_args).call
     else
       product.price * count
@@ -18,7 +18,7 @@ class GetProductsPrice
   delegate :discount_strategy, to: :product
 
   def discount_service
-    "Discounts::#{discount_strategy[:type].to_s.camelize}".constantize
+    Product::DISCOUNT_HANDLERS[discount_strategy[:type]]
   end
 
   def discount_args
