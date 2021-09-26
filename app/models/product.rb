@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   validates_uniqueness_of :code
   validates_numericality_of :price, :greater_than_or_equal_to => 0
 
+  # can be saved to products in database as json column
   def discount_strategy
     case code
     when "GR1"
