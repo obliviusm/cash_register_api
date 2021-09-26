@@ -7,6 +7,10 @@ class Api::V1::BasketsController < ApplicationController
       property :price, String, :desc => "Price in Euro like '3.11 €'"
     end
   end
+  error :unprocessable_entity, "Could not process entity"
+  returns :code => 403 do
+     property :error, String, :desc => "At least one product code you provided is not valid"
+  end
 
   def show
     @basket = {}
