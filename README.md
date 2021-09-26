@@ -1,24 +1,20 @@
-# README
+# Cash Register API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+API is available here [https://cash-register-api.herokuapp.com/v1/products](https://cash-register-api.herokuapp.com/v1/products)
 
-Things you may want to cover:
+### Install
 
-* Ruby version
+1. `bundle install`
+2. `rake db:create db:migrate db:seed`
 
-* System dependencies
+### Run
 
-* Configuration
+`rails s`
 
-* Database creation
+### Test
 
-* Database initialization
+`rspec`
 
-* How to run the test suite
+### API documentation
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Information about endpoints is here [https://cash-register-api.herokuapp.com/doc](https://cash-register-api.herokuapp.com/doc)
